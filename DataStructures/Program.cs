@@ -112,14 +112,14 @@ namespace DataStructures
             keyValuePairs.Add(6, new Person { FirstName = "Ani", LastName = "Asatrian", Email = "ani@gmail.com" });
             foreach (var item in keyValuePairs)
             {
-                Console.WriteLine($"Number is {item.Key}, First Name is {item.Value.FirstName}, Last Name is {item.Value.LastName}, {item.Value.Email} ");
+                Console.WriteLine($"Number is {item.Key}, {item.Value.FirstName}, {item.Value.LastName}, {item.Value.Email} ");
             }
             keyValuePairs.Remove(2);
             Console.WriteLine("Key 2 Removed");
             foreach (var item in keyValuePairs)
             {
-                Console.WriteLine($"Number is {item.Key}, First Name is {item.Value.FirstName}, Last Name is {item.Value.LastName}, {item.Value.Email} ");
-            }           
+                Console.WriteLine($"Number is {item.Key}, {item.Value.FirstName}, {item.Value.LastName}, {item.Value.Email} ");
+            }
         }
     }
 }

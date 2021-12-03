@@ -14,12 +14,12 @@ namespace DataStructures
 
         public string FirstName
         {
-            get { return firstName; }
+            get { return $"First Name is {firstName}"; }
             set {firstName = value; }
         }
         public string LastName
         {
-            get { return lastName; }
+            get { return $"Last Name is {lastName}"; }
             set { lastName = value; }
         }
         public string Email
@@ -28,12 +28,12 @@ namespace DataStructures
             {
                 if (email!=null)
                 {
-                    return $"Email is {email}";
+                    return $"{firstName}'s email is {email}";
 
                 } 
                 else
                 {
-                    return $"{FirstName} does not have an Email";
+                    return $"{firstName} does not have an email";
                 }
             }
             set { email = value; }
