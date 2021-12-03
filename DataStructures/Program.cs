@@ -12,7 +12,7 @@ namespace DataStructures
             List<int> intList = new List<int>();
             Stack<int> intStack = new Stack<int>();
             Queue<int> intQueue = new Queue<int>();
-            Dictionary<int, bool> keyValuePairs = new Dictionary<int, bool>();
+            Dictionary<int, Person> keyValuePairs = new Dictionary<int, Person>();
 
             Console.WriteLine("LinkedList");
             intLinkedList.AddLast(25);
@@ -104,21 +104,21 @@ namespace DataStructures
 
             Console.WriteLine();
             Console.WriteLine("Dictionaries");
-            keyValuePairs.Add(1, false);
-            keyValuePairs.Add(2, true);
-            keyValuePairs.Add(3, true);
-            keyValuePairs.Add(4, true);
-            keyValuePairs.Add(5, true);
-            keyValuePairs.Add(0, false);
+            keyValuePairs.Add(1, new Person { FirstName = "Vachagan", LastName = "Mirzoian" });
+            keyValuePairs.Add(2, new Person { FirstName = "Mihran", LastName = "Babayan", Email = "mihran@gmail.com" });
+            keyValuePairs.Add(3, new Person { FirstName = "Hrant", LastName = "Asayan", Email = "hrant@gmail.com" });
+            keyValuePairs.Add(4, new Person { FirstName = "Ara", LastName = "Avetikian", Email = "ara@gmail.com" });
+            keyValuePairs.Add(5, new Person { FirstName = "Vahan", LastName = "Darbinian" });
+            keyValuePairs.Add(6, new Person { FirstName = "Ani", LastName = "Asatrian", Email = "ani@gmail.com" });
             foreach (var item in keyValuePairs)
             {
-                Console.WriteLine(item.Key);
+                Console.WriteLine($"Number is {item.Key}, First Name is {item.Value.FirstName}, Last Name is {item.Value.LastName}, {item.Value.Email} ");
             }
             keyValuePairs.Remove(2);
             Console.WriteLine("Key 2 Removed");
             foreach (var item in keyValuePairs)
             {
-                Console.WriteLine($"Key is {item.Key}, Value is {item.Value}");
+                Console.WriteLine($"Number is {item.Key}, First Name is {item.Value.FirstName}, Last Name is {item.Value.LastName}, {item.Value.Email} ");
             }           
         }
     }
