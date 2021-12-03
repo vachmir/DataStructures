@@ -9,31 +9,70 @@ namespace DataStructures
     internal class Person
     {
         private string firstName;
-        private string lastName;    
-        private string email;    
+        private string lastName;
+        private string email = String.Empty;  
 
         public string FirstName
         {
-            get { return $"First Name is {firstName}"; }
+            get
+            {
+                char lastSymbol = firstName.First();
+                switch (lastSymbol)
+                {
+                    case 'Ա':
+                    case 'Է':
+                    case 'Ը':
+                    case 'Ի':
+                    case 'Ո':
+                    case 'Օ':
+                        return $"Անունն {firstName} է";
+                }
+                return $"Անունը {firstName} է";
+            }
             set {firstName = value; }
         }
+
         public string LastName
         {
-            get { return $"Last Name is {lastName}"; }
+            get
+            {
+                char firstSymbol = lastName.First();
+                switch (firstSymbol)
+                {
+                    case 'Ա':
+                    case 'Է':
+                    case 'Ը':
+                    case 'Ի':
+                    case 'Ո':
+                    case 'Օ':
+                        return $"Աազգանունն՝ {lastName}";
+                    default:
+                        return $"Աազգանունը՝ {lastName}";
+                }
+            }
+
             set { lastName = value; }
         }
+
         public string Email
         {
             get
             {
-                if (email!=null)
+                if (email!= String.Empty)
                 {
-                    return $"{firstName}'s email is {email}";
-
+                    char lastSymbol = firstName.Last();
+                    switch (lastSymbol)
+                    {
+                        case 'ա':
+                        case 'ո':
+                            return $"{firstName}յի էլ․ հասցեն է {email}";                            
+                        default:
+                            return $"{firstName}ի էլ․ հասցեն է {email}";                            
+                    }
                 } 
                 else
                 {
-                    return $"{firstName} does not have an email";
+                    return $"{firstName}ն էլ․ հասցե չունի";
                 }
             }
             set { email = value; }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Text;
 
 namespace DataStructures
 {
@@ -8,6 +8,7 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding =Encoding.UTF8;
             LinkedList<int> intLinkedList = new LinkedList<int>();
             List<int> intList = new List<int>();
             Stack<int> intStack = new Stack<int>();
@@ -104,21 +105,25 @@ namespace DataStructures
 
             Console.WriteLine();
             Console.WriteLine("Dictionaries");
-            keyValuePairs.Add(1, new Person { FirstName = "Vachagan", LastName = "Mirzoian" });
-            keyValuePairs.Add(2, new Person { FirstName = "Mihran", LastName = "Babayan", Email = "mihran@gmail.com" });
-            keyValuePairs.Add(3, new Person { FirstName = "Hrant", LastName = "Asayan", Email = "hrant@gmail.com" });
-            keyValuePairs.Add(4, new Person { FirstName = "Ara", LastName = "Avetikian", Email = "ara@gmail.com" });
-            keyValuePairs.Add(5, new Person { FirstName = "Vahan", LastName = "Darbinian" });
-            keyValuePairs.Add(6, new Person { FirstName = "Ani", LastName = "Asatrian", Email = "ani@gmail.com" });
+            keyValuePairs.Add(1, new Person { FirstName = "Վաչագան", LastName = "Միրզոյան" });
+            keyValuePairs.Add(2, new Person { FirstName = "Միհրան", LastName = "Բաբայան", Email = "mihran@gmail.com" });
+            keyValuePairs.Add(3, new Person { FirstName = "Հրանտ", LastName = "Ասայան", Email = "hrant@gmail.com" });
+            keyValuePairs.Add(4, new Person { FirstName = "Արա", LastName = "Ավետիքյան", Email = "ara@gmail.com" });
+            keyValuePairs.Add(5, new Person { FirstName = "Անի", LastName = "Ասատրյան", Email = "ani@gmail.com" });
+            keyValuePairs.Add(6, new Person { FirstName = "Աննա", LastName = "Ասատրյան", Email = "anna@gmail.com" });
+            keyValuePairs.Add(7, new Person { FirstName = "Սոնա", LastName = "Ասատրյան", Email = "sona@gmail.com" });
+            keyValuePairs.Add(8, new Person { FirstName = "Վահան", LastName = "Դարբինյան" });
+
+
             foreach (var item in keyValuePairs)
             {
-                Console.WriteLine($"Number is {item.Key}, {item.Value.FirstName}, {item.Value.LastName}, {item.Value.Email} ");
+                Console.WriteLine($"Համար {item.Key}, {item.Value.FirstName}, {item.Value.LastName}, {item.Value.Email}");
             }
             keyValuePairs.Remove(2);
             Console.WriteLine("Key 2 Removed");
             foreach (var item in keyValuePairs)
             {
-                Console.WriteLine($"Number is {item.Key}, {item.Value.FirstName}, {item.Value.LastName}, {item.Value.Email} ");
+                Console.WriteLine($"Համար {item.Key}, {item.Value.FirstName}, {item.Value.LastName}, {item.Value.Email}");
             }
         }
     }
