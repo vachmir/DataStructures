@@ -86,7 +86,7 @@ namespace DataStructures
 
             //LinkedList();
             //List();
-            ArrayList();
+            //ArrayList();
             //Stack();
             //Queue();
             //Dictionary();
@@ -94,7 +94,7 @@ namespace DataStructures
             //SortedList();
             //SortedSet();
 
-            //CompareSortedDictionaryAndSortedList();
+            CompareSortedDictionaryAndSortedList();
 
         }
 
@@ -165,22 +165,20 @@ namespace DataStructures
         }  
         public static void ArrayList()
         {
-            ArrayList al= new ArrayList();
-            SortedSet[] set = new SortedSet[] {};
-
-            al.Add(1);
-            al.Add(1);
-            al.Add("Բառ");
-            al.Add(true);
-            al.Add('Ճ');
-            al.AddRange(set);
-            al[1] = 9.1;
-            foreach (var item in al)
+            ArrayList arrayList= new ArrayList();
+          
+            arrayList.Add(1);
+            arrayList.Add(1);
+            arrayList.Add("Բառ");
+            arrayList.Add(true);
+            arrayList.Add('Ճ');
+           
+            arrayList[1] = 9.1;
+            foreach (var item in arrayList)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(al[3]);
-         
+            Console.WriteLine(arrayList[3]);      
 
         }
         public static void Stack()
@@ -369,7 +367,7 @@ namespace DataStructures
           
 
             var dictionaryStopwatch = Stopwatch.StartNew();
-            for (int i = 9; i < 1000000; i++)
+            for (int i = -99999; i < 1000000; i++)
             {
                 sortedDictionary.Add(i, new Person { });               
             }
@@ -377,7 +375,7 @@ namespace DataStructures
             Console.WriteLine($"{elapsedDI}");
 
             var dictionaryStopwatch1 = Stopwatch.StartNew();
-            for (int i = 9; i < 1000000; i++)
+            for (int i = -99999; i < 1000000; i++)
             {
                 sortedDictionary1.Add(i, new Person { });
             }
@@ -387,7 +385,7 @@ namespace DataStructures
 
 
             var listStopwatch = Stopwatch.StartNew();
-            for (int i = 9; i < 1000000; i++)
+            for (int i = -99999; i < 1000000; i++)
             {
                 sortedList.Add(i, new Person { });                
             }
@@ -395,7 +393,7 @@ namespace DataStructures
             Console.WriteLine($"{elapsedLI}");
 
             var listStopwatch1 = Stopwatch.StartNew();
-            for (int i = 9; i < 1000000; i++)
+            for (int i = -99999; i < 1000000; i++)
             {
                 sortedList1.Add(i, new Person { });
             }
@@ -407,17 +405,17 @@ namespace DataStructures
             Console.WriteLine("List");
 
             var swList0 = Stopwatch.StartNew();
-            sortedList.Add(0, new Person { });
+            sortedList.Add(10000000, new Person { });
             var elapsedL0 = swList0.Elapsed;
             Console.WriteLine(elapsedL0);
 
             var swList1 = Stopwatch.StartNew();
-            sortedList.Add(1, new Person { });
+            sortedList.Add(10000001, new Person { });
             var elapsedL1 = swList1.Elapsed;
             Console.WriteLine(elapsedL1);
 
             var swList2 = Stopwatch.StartNew();
-            sortedList.Add(2, new Person { });
+            sortedList.Add(10000002, new Person { });
             var elapsedL2 = swList2.Elapsed;
             Console.WriteLine(elapsedL2);
 
@@ -425,7 +423,7 @@ namespace DataStructures
 
             Console.WriteLine("Dictionary");
             var swDictionary0 = Stopwatch.StartNew();
-            sortedDictionary.Add(0, new Person { });
+            sortedDictionary.Add(10000000, new Person { });
             var elapsedD0 = swDictionary0.Elapsed;
             Console.WriteLine(elapsedD0);
             
@@ -433,14 +431,14 @@ namespace DataStructures
 
             Console.WriteLine("List");
             var swList3 = Stopwatch.StartNew();
-            sortedList.Add(3, new Person { });
+            sortedList.Add(10000003, new Person { });
             var elapsedL3 = swList3.Elapsed;
             Console.WriteLine(elapsedL3);
 
 
             Console.WriteLine("Dictionary");
             var swDictionary1 = Stopwatch.StartNew();
-            sortedDictionary.Add(1, new Person { });
+            sortedDictionary.Add(10000001, new Person { });
             var elapsedD1 = swDictionary1.Elapsed;
             Console.WriteLine(elapsedD1);
 
@@ -448,7 +446,7 @@ namespace DataStructures
 
             Console.WriteLine("List");
             var swList4 = Stopwatch.StartNew();
-            sortedList.Add(4, new Person { });
+            sortedList.Add(10000004, new Person { });
             var elapsedL4 = swList4.Elapsed;
             Console.WriteLine(elapsedL4);
 
@@ -457,12 +455,12 @@ namespace DataStructures
             Console.WriteLine("Dictionary");           
            
             var swDictionary2 = Stopwatch.StartNew();
-            sortedDictionary.Add(2, new Person { });
+            sortedDictionary.Add(10000002, new Person { });
             var elapsedD2 = swDictionary2.Elapsed;
             Console.WriteLine(elapsedD2);
 
             var swDictionary3 = Stopwatch.StartNew();
-            sortedDictionary.Add(3, new Person { });
+            sortedDictionary.Add(10000003, new Person { });
             var elapsedD3 = swDictionary3.Elapsed;
             Console.WriteLine(elapsedD3);
 
@@ -470,12 +468,12 @@ namespace DataStructures
 
             Console.WriteLine("List");
             var swList5 = Stopwatch.StartNew();
-            sortedList.Add(5, new Person { });
+            sortedList.Add(10000005, new Person { });
             var elapsedL5 = swList5.Elapsed;
             Console.WriteLine(elapsedL5);
 
             var swList6 = Stopwatch.StartNew();
-            sortedList.Add(6, new Person { });
+            sortedList.Add(10000006, new Person { });
             var elapsedL6 = swList6.Elapsed;
             Console.WriteLine(elapsedL6);
 
@@ -484,22 +482,22 @@ namespace DataStructures
             Console.WriteLine("Dictionary");   
             
             var swDictionary4 = Stopwatch.StartNew();
-            sortedDictionary.Add(4, new Person { });
+            sortedDictionary.Add(10000004, new Person { });
             var elapsedD4 = swDictionary4.Elapsed;
             Console.WriteLine(elapsedD4);
 
             var swDictionary5 = Stopwatch.StartNew();
-            sortedDictionary.Add(5, new Person { });
+            sortedDictionary.Add(10000005, new Person { });
             var elapsedD5 = swDictionary5.Elapsed;
             Console.WriteLine(elapsedD5);
 
             var swDictionary6 = Stopwatch.StartNew();
-            sortedDictionary.Add(6, new Person { });
+            sortedDictionary.Add(10000006, new Person { });
             var elapsedD6 = swDictionary6.Elapsed;
             Console.WriteLine(elapsedD6);
 
             var swDictionary7 = Stopwatch.StartNew();
-            sortedDictionary.Add(7, new Person { });
+            sortedDictionary.Add(10000007, new Person { });
             var elapsedD7 = swDictionary7.Elapsed;
             Console.WriteLine(elapsedD7);
 
@@ -507,7 +505,7 @@ namespace DataStructures
 
             Console.WriteLine("List");
             var swList7 = Stopwatch.StartNew();
-            sortedList.Add(7, new Person { });
+            sortedList.Add(10000007, new Person { });
             var elapsedL7 = swList7.Elapsed;
             Console.WriteLine(elapsedL7);
 
@@ -515,18 +513,19 @@ namespace DataStructures
 
             Console.WriteLine("Dictionary");
             var swDictionary8 = Stopwatch.StartNew();
-            sortedDictionary.Add(8, new Person { });
+            sortedDictionary.Add(10000008, new Person { });
             var elapsedD8 = swDictionary8.Elapsed;
             Console.WriteLine(elapsedD8);
             Console.WriteLine();
 
             
+
+
             Console.WriteLine("List value removal");
             var swListRemove0 = Stopwatch.StartNew();
             sortedList.Remove(sortedList.Count);            
             var elapsedListRemove0 = swListRemove0.Elapsed;
             Console.WriteLine(elapsedListRemove0);
-
 
 
             Console.WriteLine("Dictionary value removal");
